@@ -31,6 +31,7 @@
 class MeshSnap : public MPxDeformerNode {
   public:
     MeshSnap(){};
+    virtual ~MeshSnap(){};
     static void *creator();
     static MStatus initialize();
 

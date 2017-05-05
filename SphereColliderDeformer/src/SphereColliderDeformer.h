@@ -24,6 +24,7 @@
 class SphereColliderDeformer : public MPxDeformerNode {
   public:
     SphereColliderDeformer(){};
+    virtual ~SphereColliderDeformer(){};
     static void *creator();
     static MStatus initialize();
 

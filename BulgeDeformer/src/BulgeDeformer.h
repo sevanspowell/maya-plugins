@@ -27,6 +27,7 @@
 class BulgeDeformer : public MPxDeformerNode {
   public:
     BulgeDeformer(){};
+    virtual ~BulgeDeformer(){};
     static void *creator();
     static MStatus initialize();
     virtual MStatus deform(MDataBlock &data, MItGeometry &itGeo,

@@ -15,7 +15,8 @@
  */
 class DoublerNode : public MPxNode {
 public:
-    DoublerNode() {}
+    DoublerNode() {};
+    virtual ~DoublerNode() {};
     static void *creator();
     static MStatus initialize();
     virtual MStatus compute(const MPlug &plug, MDataBlock &data) override;

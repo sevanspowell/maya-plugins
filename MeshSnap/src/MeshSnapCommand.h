@@ -22,6 +22,7 @@
 class MeshSnapCommand : public MPxCommand {
   public:
     MeshSnapCommand(){};
+    ~MeshSnapCommand(){};
     virtual MStatus doIt(const MArgList &argList);
     virtual MStatus redoIt();
     virtual MStatus undoIt();
