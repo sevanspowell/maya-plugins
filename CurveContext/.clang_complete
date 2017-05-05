@@ -1,0 +1,6 @@
+-DCurveContext_EXPORTS
+-DOSMac_
+-DREQUIRE_IOSTREAM
+-D_BOOL
+-I/Applications/Autodesk/maya2016.5/devkit/include
+-std=gnu++11

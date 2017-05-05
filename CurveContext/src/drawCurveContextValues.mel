@@ -1,0 +1,20 @@
+global proc drawCurveContextValues(string $toolName)
+{
+    string $parent = (`toolPropertyWindow -q -location`);
+    setParent $parent;
+
+    // Initialize settings 
+    float $length = `drawCurveContext -q -length $toolName`;
+    floatSliderGrp -e -v $length DrawCurveLengthField;
+    floatSliderGrp -e
+        -changeCommand ("updateCurveLength " + $toolName)
+        DrawCurveLengthField ;
+
+    toolPropertySelect "drawCurveContext";
+}
+
+global proc updateCurveLength(string $toolName)
+{
+    float $length = `floatSliderGrp -q -v DrawCurveLengthField`;
+    drawCurveContext -e -length $length $toolName;
+}
